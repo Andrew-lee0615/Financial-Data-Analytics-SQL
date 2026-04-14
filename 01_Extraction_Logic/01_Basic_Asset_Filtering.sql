@@ -25,3 +25,12 @@ WHERE return_rate > 5
   AND status = 'Active'
 -- Sort by highest returns and then by lowest risk score
 ORDER BY return_rate DESC, risk_score ASC;
+
+-- [Step 3] Advanced Filtering: Pattern Matching
+-- Scenario: Finding all assets with tickers starting with 'A' (e.g., AAPL, AMZN)
+-- Or searching for funds that contain 'ESG' in their name.
+
+SELECT ticker, asset_name, sector
+FROM asset_universe
+WHERE ticker LIKE 'A%' 
+   OR asset_name LIKE '%ESG%';
