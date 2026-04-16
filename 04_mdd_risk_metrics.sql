@@ -52,10 +52,3 @@ SELECT
 FROM DrawdownCalc
 GROUP BY ticker
 ORDER BY mdd_percentage ASC;
-
-/*
-[Analysis Note for NYC Interview]
-"By quantifying MDD using SQL window functions, I can objectively compare 
-current market volatility with a decade of historical data, providing a 
-statistical basis for 'buy-on-dip' strategies or risk mitigation."
-*/
